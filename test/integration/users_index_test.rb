@@ -1,8 +1,7 @@
 require 'test_helper'
 class UsersIndexTest < ActionDispatch::IntegrationTest
   def setup
-    @admin
-    = users(:michael)
+    @admin    = users(:michael)
     @non_admin = users(:archer)
   end
   test "index as admin including pagination and delete links" do
