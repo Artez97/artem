@@ -227,6 +227,8 @@ GEM
     mini_portile2 (2.8.4)
     minitest (5.19.0)
     msgpack (1.7.2)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.7)
       date
       net-protocol
@@ -341,6 +343,7 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.10.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)
@@ -384,6 +387,9 @@ DEPENDENCIES
   jbuilder
   listen (= 3.1.5)
   mini_magick (= 4.9.5)
+  net-http
+  net-imap
+  net-smtp
   pg (= 1.1.4)
   puma (~> 5.0)
   pundit
@@ -397,7 +403,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
-  tzinfo-data
+  uri (= 0.10.0)
   web-console
   webdrivers
   webpacker!
