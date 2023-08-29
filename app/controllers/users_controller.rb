@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   def index
-    @users = User.where(activated: FILL_IN).paginate(page: params[:page])
+    @users = User.where(activated: false).paginate(page: params[:page])
   end
   def update
     @user = User.find(params[:id])
