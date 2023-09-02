@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  devise_for :admin_users, ActiveAdmin::Devise.config
   get 'password_resets/new'
   get 'password_resets/edit'
   get 'sessions/new'
@@ -16,4 +19,5 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   resources :password_resets,            only: [:new, :create, :edit, :update]
   resources :microposts,            only: [:create, :destroy]
+  ActiveAdmin.routes(self)
 end
